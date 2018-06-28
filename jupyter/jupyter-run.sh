@@ -1,5 +1,5 @@
 #!/bin/bash
-docker run --init -d \
+docker run --init --rm -d \
 	-v /etc:/opt/etc:ro \
 	-v /home:/home \
 	--name jupyter2 \

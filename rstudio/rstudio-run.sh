@@ -1,5 +1,5 @@
 #!/bin/bash
-docker run -d \
+docker run -d --rm \
 	-v /etc:/opt/etc:ro \
 	-v /home:/home \
 	--name rstudio2 \
