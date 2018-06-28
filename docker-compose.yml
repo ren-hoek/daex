@@ -1,0 +1,34 @@
+version: '2'
+services:
+  rstudio:
+    image: prod/rstudio
+    hostname: rstudio 
+    container_name: rstudio
+    volumes:
+      - /etc:/opt/etc:ro
+      - /home:/home
+  jupyter:
+    image: prod/jupyter
+    hostname: jupyter
+    container_name: jupyter
+    volumes:
+      - /etc:/opt/etc:ro
+      - /home:/home
+  shiny:
+    image: rocker/shiny
+    hostname: shiny
+    container_name: shiny
+    volumes:
+     - /home/gavin/Projects/daex/shiny/apps/:/srv/shiny-server/
+     - /home/gavin/Projects/deax/shiny/logs/:/var/log/shiny-server/
+  nginx:
+    image: prod/nginx
+    hostname: nginx
+    container_name: nginx
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - /home/gavin/Projects/daex/nginx/conf:/etc/nginx
+      - /home/gavin/Projects/daex/nginx/html:/usr/share/nginx/html
+      - /etc:/opt/etc:ro

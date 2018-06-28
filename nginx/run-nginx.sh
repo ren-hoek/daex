@@ -5,5 +5,5 @@ docker run --rm -d -p 80:80 -p 443:443 \
 	-v /etc:/opt/etc:ro \
 	--name nginx \
 	--hostname nginx \
-	--network jupyterhub prod/nginx
+	--network daex_default prod/nginx
 
