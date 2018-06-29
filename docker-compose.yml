@@ -20,7 +20,7 @@ services:
     container_name: shiny
     volumes:
      - /home/gavin/Projects/daex/shiny/apps/:/srv/shiny-server/
-     - /home/gavin/Projects/deax/shiny/logs/:/var/log/shiny-server/
+     - /home/gavin/Projects/daex/shiny/logs/:/var/log/shiny-server/
   nginx:
     image: prod/nginx
     hostname: nginx
