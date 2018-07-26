@@ -23,6 +23,6 @@ RUN ln -sf /etc/opt/group /etc/group
 RUN ln -sf /etc/opt/gshadow /etc/gshadow
 
 RUN chown -R "rstudio:rstudio" /home/rstudio
-ADD start-rserver.sh .
+ADD bin/start-rserver.sh .
 ENTRYPOINT ["tini", "--"]
 CMD ["./start-rserver.sh"]

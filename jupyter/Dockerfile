@@ -24,8 +24,6 @@ RUN ln -sf /etc/opt/shadow /etc/shadow
 RUN ln -sf /etc/opt/group /etc/group
 RUN ln -sf /etc/opt/gshadow /etc/gshadow
 
-COPY jupyter.crt .
-COPY jupyter.key .
 ADD bin/start-jupyter.sh .
 CMD ["./start-jupyter.sh"]
 
